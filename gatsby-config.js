@@ -1,6 +1,6 @@
 // TODO: dear user, please change this to your own instance
-const netlifyInstance = "https://gatsby-with-netlify-identity.netlify.app"
-if (netlifyInstance === "https://gatsby-with-netlify-identity.netlify.app") {
+const netlifyInstance = process.env.GATSBY_NETLIFY_IDENTITY_URL
+if (netlifyInstance === process.env.GATSBY_NETLIFY_IDENTITY_URL) {
   console.warn(`
 
 **************************

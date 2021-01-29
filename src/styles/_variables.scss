@@ -42,19 +42,3 @@ body.light,
 .light-theme {
   @include rmd-theme-light;
 }
-
-@keyframes slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.slide-down[data-reach-menu-list],
-.slide-down[data-reach-menu-items] {
-  border-radius: 5px;
-  animation: slide-down 0.2s ease;
-}
