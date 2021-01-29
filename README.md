@@ -11,6 +11,7 @@
   </div>
 </marquee>
 
+[Source Code - jamstack-hackathon-starter](https://github.com/Ekwuno/jamstack-hackathon-starter)
 
 This is a fork of https://github.com/gatsbyjs/gatsby-starter-default which shows how to use Netlify Identity and Netlify Functions (via [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=github&utm_medium=swyx-hackathon-starter&utm_campaign=devex)) with Gatsby. Start here for your next JAMstack hackathon or use this as a reference implementation.
 
