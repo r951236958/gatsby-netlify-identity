@@ -1,20 +1,20 @@
 import React from "react"
 import { Link } from "gatsby-theme-material-ui"
 // import LinkButton from "../LinkButton"
-import styled from "styled-components"
+// import styled from "styled-components"
 
-const StyledLink = styled(Link)({
-  color: "#E0E0E0",
-  padding: "0.5rem 0.75rem",
-  borderRadius: "0.25rem",
+// const Link = styled(Link)({
+//   color: "#E0E0E0",
+//   padding: "0.5rem 0.75rem",
+//   borderRadius: "0.25rem",
 
-  "&:hover": {
-    borderBottom: "1px solid #D1D5DB",
-    color: "#BDBDBD",
-    textDecoration: "none",
-    backgroundColor: "rgba(55, 65, 81, 0.7)",
-  },
-})
+//   "&:hover": {
+//     borderBottom: "1px solid #D1D5DB",
+//     color: "#BDBDBD",
+//     textDecoration: "none",
+//     backgroundColor: "rgba(55, 65, 81, 0.7)",
+//   },
+// })
 
 export default function Footer() {
   return (
@@ -30,25 +30,34 @@ export default function Footer() {
           </svg>
         </div>
         <div className="max-w-screen-xl mx-auto ">
-          <div className="grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-700 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8">
+          <div className="grid grid-cols-8 md:grid-cols-9 lg:grid-cols-8  divide-gray-700 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8">
             <div className="col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0">
               <h5 className="text-xl font-semibold text-white">Company</h5>
               <nav className="mt-4">
                 <ul className="space-y-2">
                   <li>
-                    <StyledLink href="#" className="font-normal">
+                    <Link
+                      href="#"
+                      className="font-normal text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2"
+                    >
                       Landing Pages
-                    </StyledLink>
+                    </Link>
                   </li>
                   <li>
-                    <StyledLink href="#" className="font-normal">
+                    <Link
+                      href="#"
+                      className="font-normal text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2"
+                    >
                       Features
-                    </StyledLink>
+                    </Link>
                   </li>
                   <li>
-                    <StyledLink href="#" className="font-normal">
+                    <Link
+                      href="#"
+                      className="font-normal text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2"
+                    >
                       Download brochure
-                    </StyledLink>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -56,26 +65,38 @@ export default function Footer() {
             <div className="col-span-8 md:col-span-3 lg:col-span-3 md:px-8 py-4 md:py-0">
               <h5 className="text-xl font-semibold text-white">Industries</h5>
               <nav className="mt-4">
-                <ul className="grid lg:grid-cols-2">
+                <ul className="grid grid-cols-2">
                   <li className="mb-2">
-                    <StyledLink href="#" className="font-normal">
+                    <Link
+                      href="#"
+                      className="font-normal text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2"
+                    >
                       Employment
-                    </StyledLink>
+                    </Link>
                   </li>
                   <li className="mb-2">
-                    <StyledLink href="#" className="font-normal">
+                    <Link
+                      href="#"
+                      className="font-normal text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2"
+                    >
                       Company
-                    </StyledLink>
+                    </Link>
                   </li>
                   <li className="mb-2">
-                    <StyledLink href="#" className="font-normal">
+                    <Link
+                      href="#"
+                      className="font-normal text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2"
+                    >
                       Childcare
-                    </StyledLink>
+                    </Link>
                   </li>
                   <li className="mb-2">
-                    <StyledLink href="#" className="font-normal">
+                    <Link
+                      href="#"
+                      className="font-normal text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2"
+                    >
                       Downloads
-                    </StyledLink>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -83,9 +104,12 @@ export default function Footer() {
             <div className="col-span-8 md:col-span-3 lg:col-span-3 md:px-8 py-4 md:py-0">
               <h5 className="text-xl font-semibold text-white">Follow us</h5>
               <nav className="mt-4">
-                <ul className="grid lg:grid-cols-2">
-                  <li className="mb-2">
-                    <StyledLink href="#" className="flex space-x-2 font-normal">
+                <ul className="space-y-2">
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm font-normal flex text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2 space-x-2"
+                    >
                       <svg
                         className="h-6 w-6"
                         aria-hidden="true"
@@ -95,12 +119,12 @@ export default function Footer() {
                         <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                       </svg>
                       <span>Twitter</span>
-                    </StyledLink>
+                    </Link>
                   </li>
-                  <li className="mb-2">
-                    <StyledLink
+                  <li>
+                    <Link
                       href="#"
-                      className="flex space-x-2  font-normal"
+                      className="font-normal flex text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2 space-x-2"
                     >
                       <svg
                         className="h-6 w-6"
@@ -115,12 +139,12 @@ export default function Footer() {
                         />
                       </svg>
                       <span>Instagram</span>
-                    </StyledLink>
+                    </Link>
                   </li>
-                  <li className="mb-2">
-                    <StyledLink
+                  <li>
+                    <Link
                       href="#"
-                      className="flex space-x-2  font-normal"
+                      className="font-normal flex text-gray-100 hover:text-gray-200 hover:rounded-sm hover:bg-gray-400 hover:bg-opacity-20 hover:underline px-3 py-2 space-x-2"
                     >
                       <svg
                         className="h-6 w-6"
@@ -135,7 +159,7 @@ export default function Footer() {
                         />
                       </svg>
                       <span>Facebook</span>
-                    </StyledLink>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -144,14 +168,14 @@ export default function Footer() {
         </div>
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 mt-8 lg:mt-12 border-t-2 border-gray-700 pt-8">
           <nav className="flex flex-wrap justify-center space-x-6">
-            <StyledLink href="#" className="font-normal text-sm mb-2">
+            <Link href="#" className="font-normal text-sm mb-2">
               Cookie settings
-            </StyledLink>
+            </Link>
           </nav>
           <p className="text-sm text-center md:text-right">
             © {new Date().getFullYear()}, Built with
             {` `}
-            <StyledLink href="https://www.gatsbyjs.com">Gatsby</StyledLink>
+            <Link href="https://www.gatsbyjs.com">Gatsby</Link>
           </p>
         </div>
       </footer>
