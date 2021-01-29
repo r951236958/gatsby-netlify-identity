@@ -1,6 +1,7 @@
 import React from "react"
 import { Router } from "@reach/router"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
+import Status from "../components/Status"
 import NavBar from "./components/NavBar"
 import Profile from "./profile"
 import Main from "./main"
@@ -11,6 +12,7 @@ const App = () => {
   return (
     <Layout>
       <NavBar />
+      <Status />
       <Router>
         <PrivateRoute path="/app/profile" component={Profile} />
         <PublicRoute path="/app">

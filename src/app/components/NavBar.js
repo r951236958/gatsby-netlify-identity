@@ -10,25 +10,30 @@ export default () => {
     : "You are not logged in"
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flex: "1",
-        justifyContent: "space-between",
-        borderBottom: "1px solid #d1c1e0",
-        backgroundColor: "aliceblue",
-      }}
-    >
-      <span>{message}</span>
+    <div className="flex flex-1 justify-between items-center bg-gray-400 bg-opacity-20 round-md p-2">
+      <span className="bg-gray-600 text-sm font-bold p-2 rounded-lg">
+        {message}
+      </span>
 
       <nav>
         <span>Navigate the app: </span>
-        <Link to="/app/">Main</Link>
+        <Link
+          className="border-b-2 border-gray-400 hover:text-gray-400 mx-1"
+          to="/app/"
+        >
+          Main
+        </Link>
         {` `}
-        <Link to="/app/profile">Profile</Link>
+        <Link
+          className="border-b-2 border-gray-400 hover:text-gray-400 mx-1"
+          to="/app/profile"
+        >
+          Profile
+        </Link>
         {` `}
         {isLoggedIn ? (
           <a
+            className="border-b-2 border-pink-400 hover:text-pink-400 mx-1"
             href="/"
             onClick={async event => {
               event.preventDefault()
@@ -39,7 +44,12 @@ export default () => {
             Logout
           </a>
         ) : (
-          <Link to="/app/login">Login</Link>
+          <Link
+            className="border-b-2 border-blue-400 hover:text-blue-400 mx-1"
+            to="/app/login"
+          >
+            Login
+          </Link>
         )}
       </nav>
     </div>

@@ -19,7 +19,7 @@ More docs: https://www.netlify.com/docs/identity/
 
 module.exports = {
   siteMetadata: {
-    title: "JAMstack Hackathon Starter",
+    title: "Gatsby + Netlify",
     description: `Kick off your next, great Gatsby app.`,
     author: `@swyx`,
     menuLinks: [

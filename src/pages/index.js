@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import Layout from "../components/layout"
+//import styled from "styled-components"
+import Layout from "../components/Layout"
 import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
+import Hr from "../components/Hr"
 
 class IndexPage extends React.Component {
   state = { loading: false, msg: null }
@@ -21,28 +22,27 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <div>
+        <div className="flex flex-col lg:flex-row justify-between divide-dashed md:divide-x-0 lg:divide-x-4 md:divide-y-4 lg:divide-y-0 divide-red-700">
+          <div className="mb-4 mx-2">
             <p>
               Welcome to your new Gatsby + Netlify Functions + Netlify Identity
               site
             </p>
+
             <ul>
               <li>
                 This site has statically generated marketing pages like this one
-                and <Link to="/page-2/">page 2.</Link>{" "}
+                and{" "}
+                <Link className="link pb-1" to="/page-2/">
+                  page 2.
+                </Link>{" "}
               </li>
               <li>
                 It also has a dynamically generated clientside app guarded by
                 authentication:
                 <ul>
                   <li>
-                    <Link to="/app/">
+                    <Link className="link pb-1" to="/app/">
                       <b>Go to App (with Netlify Identity)</b>
                     </Link>{" "}
                   </li>
@@ -50,13 +50,16 @@ class IndexPage extends React.Component {
               </li>
               <li>
                 You can{" "}
-                <a href="https://github.com/sw-yx/jamstack-hackathon-starter">
+                <a
+                  className="link pb-1"
+                  href="https://github.com/sw-yx/jamstack-hackathon-starter"
+                >
                   view source here
                 </a>
               </li>
               <li>
                 or see{" "}
-                <a href="https://youtu.be/bueXJInQt2c">
+                <a className="link pb-1" href="https://youtu.be/bueXJInQt2c">
                   the Youtube walkthrough
                 </a>
               </li>
@@ -70,12 +73,15 @@ class IndexPage extends React.Component {
                 </a>
               </li>
             </ul>
-            <hr />
+            <Hr />
+
             <p>
               You can still access Netlify functions even on static "marketing
               pages". This function is available at{" "}
               <a href="/.netlify/functions/token-hider">
-                <code>/.netlify/functions/token-hider</code>
+                <code className="language-html">
+                  /.netlify/functions/token-hider
+                </code>
               </a>{" "}
               and it uses an API_SECRET environment variable that is hidden from
               the frontend!
@@ -91,13 +97,7 @@ class IndexPage extends React.Component {
               <pre>"Click the button and watch this!"</pre>
             )}
           </div>
-          <div
-            style={{
-              borderLeft: "brown",
-              borderLeftStyle: "dashed",
-              paddingLeft: "3rem",
-            }}
-          >
+          <div className="lg:pt-0 pl-4">
             <p>Now go build something great.</p>
             <div style={{ maxWidth: "300px", marginBottom: "1.45rem" }}>
               <Image />
