@@ -1,6 +1,6 @@
 // TODO: dear user, please change this to your own instance
-const netlifyInstance = "https://jamstack-hackathon-starter.netlify.com"
-if (netlifyInstance === "https://jamstack-hackathon-starter.netlify.com") {
+const netlifyInstance = "https://gatsby-with-netlify-identity.netlify.app"
+if (netlifyInstance === "https://gatsby-with-netlify-identity.netlify.app") {
   console.warn(`
 
 **************************
@@ -22,10 +22,42 @@ module.exports = {
     title: "JAMstack Hackathon Starter",
     description: `Kick off your next, great Gatsby app.`,
     author: `@swyx`,
+    menuLinks: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "About",
+        link: "/about/",
+      },
+      {
+        name: "Page2",
+        link: "/page-2/",
+      },
+      {
+        name: "Links",
+        link: "/links/",
+      },
+      {
+        name: "Profile",
+        link: "/account/profile/",
+      },
+    ],
   },
 
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        useResolveUrlLoader: true,
+        sassOptions: {
+          javascriptEnabled: true,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/app/*`] },
@@ -60,5 +92,26 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Roboto`,
+                variants: [`300`, `400`, `500`],
+              },
+            ],
+          },
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify-identity`,
+      options: {
+        url: `https://gatsby-with-netlify-identity.netlify.app/` // required!
+      }
+    },
   ],
 }
